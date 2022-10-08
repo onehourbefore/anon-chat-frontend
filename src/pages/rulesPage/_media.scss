@@ -1,0 +1,15 @@
+@media(max-width: 620px) {
+    .root__list {
+        width: 100%;
+    }
+}
+
+@media(max-width: 460px) {
+    .root__back {
+        height: 20px;
+    }
+
+    .root__title {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(1, 5, 58, 0.2) inset;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__light {
+    background: linear-gradient(180deg, rgb(0, 130, 206), rgb(0, 29, 177));
+  }
+
+  &__dark {
+    background: linear-gradient(180deg, rgb(0, 15, 24), rgb(0, 0, 0));
+  }
+
+  &__container {
+    width: 800px;
+  }
+}
+
+@import 'media.scss'

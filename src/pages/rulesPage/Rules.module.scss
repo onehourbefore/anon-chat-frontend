@@ -1,0 +1,49 @@
+.root {
+    padding: 40px;
+    color: white;
+
+    &__back {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 5px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 50px;
+        letter-spacing: 0.5px;
+
+        span {
+            text-decoration: underline;
+            font-weight: 800;
+        }
+    }
+
+    &__list {
+        display: block;
+        margin: 20px auto 0px;
+        width: 500px;
+        padding-left: 20px;
+    }
+
+    &__listItem {
+        margin-top: 5px;
+        flex-wrap: wrap;
+        font-size: inherit;
+    }
+}
+
+@import 'media.scss'

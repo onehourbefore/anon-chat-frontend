@@ -1,0 +1,23 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &__spinner {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px dashed rgb(0, 130, 206);
+        animation: rotate 1s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg) scale(1);
+        }
+        to {
+            transform: rotate(360deg) scale(1.3);
+        }
+    }
+}

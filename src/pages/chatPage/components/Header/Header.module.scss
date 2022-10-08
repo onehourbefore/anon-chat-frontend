@@ -1,0 +1,76 @@
+@mixin on_hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.root {
+    height: 7%;
+    background: rgba(255, 255, 255, 0.05);
+    font-family: 'Franklin Gothic Medium';
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_title {
+        cursor: default;
+    }
+
+    &_wrapperIcons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_icon {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        cursor: pointer;
+
+        &:hover::after {
+            content: attr(data-title);
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            font-size: 10px;
+            animation: opacityHeader 1.2s ease-in-out;
+
+            @keyframes opacityHeader {
+                0% {
+                    opacity: 0;
+                }
+                75%{
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+        &:hover {
+            @include on_hover
+        }
+
+        &:last-child {
+            margin-left: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

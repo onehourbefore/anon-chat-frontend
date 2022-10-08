@@ -1,0 +1,92 @@
+.root {
+    padding: 40px;
+    color: white;
+    height: 100%;
+
+    &__back {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 5px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 10px 0px;
+
+        span {
+            text-decoration: underline;
+            font-weight: 800;
+        }
+    }
+
+    &__inputsDiv {
+        display: block;
+        margin: 0px auto;
+        width: 80%;
+
+        &_subtitle {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0px 10px 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+        }
+
+        &_wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            margin-top: 10px;
+
+            label {
+                letter-spacing: 0.5px;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    color: grey;
+                }
+            }
+
+            input {
+                width: 20px;
+                height: 20px;
+                margin-left: 40px;
+                cursor: pointer;
+
+                &:focus {
+                    outline: 1px solid rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+
+    &__active {
+        color: grey;
+        
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+@import 'media.scss'

@@ -1,0 +1,8 @@
+@mixin on_hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.root {
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+}
